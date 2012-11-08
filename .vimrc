@@ -4,4 +4,5 @@ set expandtab
 set smarttab
 set autoindent
 set ruler
+set nosmartindent
 
