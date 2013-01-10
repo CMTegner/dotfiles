@@ -3,6 +3,7 @@ bash_prompt
 emoticons
 exports
 git-completion
+npm-completion
 gitconfig
 path
 profile
