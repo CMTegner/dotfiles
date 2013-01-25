@@ -6,7 +6,8 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{aliases,bash_prompt,exports,git-completion,path}; do
+npm completion > ~/.npm-completion
+for file in ~/.{aliases,bash_prompt,exports,git-completion,npm-completion,path}; do
 	[ -r "$file" ] && source "$file"
 done
 unset file
