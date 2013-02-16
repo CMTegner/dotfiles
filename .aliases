@@ -2,4 +2,5 @@ alias ll='ls -lAFhG'
 alias l='ls -lFhG'
 alias assertions='pmset -g assertions'
 alias emo='cat ~/.emoticons'
+alias cx='cd; cd git/cx'
 
