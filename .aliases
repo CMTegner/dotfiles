@@ -3,4 +3,5 @@ alias l='ls -lFhG'
 alias assertions='pmset -g assertions'
 alias emo='cat ~/.emoticons'
 alias cx='cd ~/git/cx'
-
+alias grunt-old='sudo npm -g uninstall grunt-cli && sudo npm -g install grunt && grunt --version'
+alias grunt-new='sudo npm -g uninstall grunt && sudo npm -g install grunt-cli && grunt --version'
