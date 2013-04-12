@@ -3,3 +3,4 @@ export PATH=${PATH}:~/git/dev-tools
 # Mac Ports paths
 export PATH=/opt/local/bin:$PATH
 export PATH=/opt/local/sbin:$PATH
+export PATH=/Library/Java/JavaVirtualMachines/jdk1.7.0_17.jdk/Contents/Home/bin:$PATH
