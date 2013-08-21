@@ -8,3 +8,4 @@ alias port-clean='du -sh /opt && sudo port clean --all installed && sudo port -f
 alias opng='optipng -o 9 -dir . *.png'
 alias jtran='find . -name "*.jpg" -exec jpegtran -o "{}" > optimized.jpg \; -exec mv optimized.jpg {} \;'
 alias rb='git co master && git pull && git co - && git rebase origin/master'
+alias mi='mvn install -DskipTests -Dmaven.javadoc.skip=true'
