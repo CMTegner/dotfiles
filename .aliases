@@ -10,3 +10,9 @@ alias jtran='find . -name "*.jpg" -exec jpegtran -o "{}" > optimized.jpg \; -exe
 alias b='git co origin/master -b'
 alias gpop='git reset --soft HEAD~1'
 alias gpush='git push origin HEAD'
+alias resound='sudo killall coreaudiod'
+alias cxana='curl -s https://analytics.cxense.com/json/version.json | jq ".version" | sed "s/\"//g"'
+
+function br {
+    git co $(git b | grep $1 | head -n1)
+}
