@@ -9,3 +9,6 @@ unset file
 # Populate .npm-completion file
 npm completion > ~/.npm-completion
 source ~/.npm-completion
+
+npm config set init.author.name "Christian Tegnér"
+npm config set init.author.email christian.tegner@gmail.com
