@@ -6,6 +6,8 @@ for file in ~/.{path,aliases,bash_prompt,exports,git-completion}; do
 done
 unset file
 
+touch $NODE_REPL_HISTORY_FILE
+
 # Populate .npm-completion file
 npm completion > ~/.npm-completion
 source ~/.npm-completion
