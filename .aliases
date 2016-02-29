@@ -6,11 +6,13 @@ alias cx='cd `git rev-parse --show-toplevel`'
 alias port-clean='du -sh /opt && sudo port clean --all installed && sudo port -f uninstall inactive  && du -sh /opt'
 alias opng='optipng -o 9 -dir . *.png'
 alias jtran='find . -name "*.jpg" -exec jpegtran -optimize -outfile optimized.jpg "{}" \; -exec mv optimized.jpg {} \;'
-alias b='git co origin/master -b'
+alias b='git branch --list'
+alias bn='git co origin/master -b'
+alias bls='git for-each-ref --sort=-committerdate --format="%(refname)" refs/heads/ | sed "s/^refs\/heads\///"'
 alias gpop='git reset --soft HEAD~1'
 alias gpush='git push origin HEAD'
 alias resound='sudo killall coreaudiod'
 
-function br {
+function bb {
     git co $(git b | grep $1 | head -n1)
 }
