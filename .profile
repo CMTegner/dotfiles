@@ -14,3 +14,6 @@ source ~/.npm-completion
 
 npm config set init.author.name "Christian Tegnér"
 npm config set init.author.email christian.tegner@gmail.com
+
+export NVM_DIR="~/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
