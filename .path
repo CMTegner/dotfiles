@@ -1,2 +1,4 @@
-export PATH=/Library/Java/JavaVirtualMachines/jdk1.8.0_74.jdk/Contents/Home/bin:$PATH
+export PATH=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/bin:$PATH
 export PATH=/opt/finnbuild/latest/bin:$PATH
+export PATH=$HOME/.yarn/bin:$PATH
+export PATH=$HOME/lib/google-cloud-sdk/bin:$PATH

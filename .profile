@@ -15,5 +15,10 @@ source ~/.npm-completion
 npm config set init.author.name "Christian Tegnér"
 npm config set init.author.email christian.tegner@gmail.com
 
-export NVM_DIR="~/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
+# Kubectl shell completion
+source '$HOME/.kube/completion.bash.inc'
