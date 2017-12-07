@@ -1,5 +1,5 @@
 export MAVEN_OPTS="-Xmx1024m -ea"
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/
 export NODE_PATH=/usr/local/lib/node_modules/
 export NODE_REPL_HISTORY_FILE=~/.node_repl_history
 export NODE_REPL_MODE=strict
