@@ -8,6 +8,7 @@ unset file
 
 touch $NODE_REPL_HISTORY_FILE
 
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 [ -f "$HOME/lib/google-cloud-sdk/path.bash.inc" ] && . $HOME/lib/google-cloud-sdk/path.bash.inc
 [ -f "$HOME/lib/google-cloud-sdk/completion.bash.inc" ] && . $HOME/lib/google-cloud-sdk/completion.bash.inc
 
@@ -23,5 +24,5 @@ export NVM_DIR="$HOME/.nvm"
 
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
-# Kubectl shell completion
-[ -f "$HOME/.kube/completion.bash.inc" ] && . $HOME/.kube/completion.bash.inc
+[ -f "$HOME/.kube/completion.bash.inc" ] || kubectl completion bash > ~/.kube/completion.bash.inc
+. $HOME/.kube/completion.bash.inc
