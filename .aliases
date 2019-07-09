@@ -12,7 +12,34 @@ alias bls='git for-each-ref --sort=-committerdate --format="%(refname)" refs/hea
 alias gpop='git reset --soft HEAD~1'
 alias gpush='git push origin HEAD'
 alias resound='sudo killall coreaudiod'
+alias yt='yarn test'
+alias ys='yarn start'
+alias yj='yarn jest --coverage'
+alias white='yarn lint:fix && git ci -a -m "Fix indentation (whitespace)"'
+
+function port {
+    lsof -i :$1
+}
+
+function pods {
+    watch kubectl get pods -lapp=$1 $2
+}
 
 function bb {
     git co $(git b | grep $1 | head -n1)
+}
+
+function cdiff {
+    if [ -n "$(git status --porcelain)" ]; then
+        echo "Working directory is not clean!"
+        exit 1
+    fi
+    git checkout master
+    yarn
+    yarn jest --coverage
+    mv coverage/coverage-summary.json coverage/master.json
+    git checkout -
+    yarn
+    yarn jest --coverage
+    istanbul-diff --recurse --detail lines,statements,functions,branches coverage/master.json coverage/coverage-summary.json
 }

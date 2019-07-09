@@ -6,6 +6,9 @@ for file in ~/.{path,aliases,bash_prompt,exports,git-completion}; do
 done
 unset file
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
 touch $NODE_REPL_HISTORY_FILE
 
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
@@ -19,9 +22,12 @@ export NVM_DIR="$HOME/.nvm"
 npm completion > ~/.npm-completion
 source ~/.npm-completion
 
+# Populate .node-completion file
+node --completion-bash > ~/.node-completion
+source ~/.node-completion
+
 npm config set init.author.name "Christian Tegnér"
 npm config set init.author.email christian.tegner@gmail.com
-
 
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
